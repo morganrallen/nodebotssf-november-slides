@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Spheros and NodeJS</title>
+
+		<meta name="description" content="NodeBotSF Nov - Spheros and NodeJS">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>Spheros and NodeJS</h1>
+					<h3>Overview of working with Spheros and NodeJS</h3>
+					<p>
+						<small>By <a href="http://ithoughtyouweretherobot.com">Morgan 'ARR!' Allen</a> / <a href="http://twitter.com/captain_morgan">@captain_morgan</a></small>
+					</p>
+          <p><a href="http://ithoughtyouweretherobot.com">I THOUGHT YOU WERE THE ROBOT</a></p>
+				</section>
+
+        <section>
+          <div>
+            <img src="/img/NodeJS.png" style="height: 140px"/>
+          </div>
+          <div>
+            <img src="/img/Sphero.jpg" />
+          </div>
+        </section>
+
+        <section>
+          <section>
+            <h1>my experience so far</h1>
+          </section>
+          <section>
+            <h3>
+              <a href="http:/nodeknockout.com">Node Knockout 4</a>
+            </h3>
+          </section>
+
+          <section>
+          <h1><a href="https://github.com/mick/node-sphero">node-sphero</a></h1>
+          <h3>The good</h3>
+          <ul>
+            <li>Decent publicity</li>
+            <li>At first appearance, good consistent API</li>
+            <li>Notable author</li>
+          </ul>
+          </section>
+
+          <section>
+          <h1>node-sphero</h1>
+          <h3>The bad</h3>
+          <ul>
+            <li>Out of date, required an old version of node-serialport that would not compile on NodeJS v0.10.x</li>
+            <li>Couple of odd assumptions on controlling multiple bots</li>
+            <li>Main classes behind a factory !== extensible</li>
+            <li>Poor examples</li>
+          </ul>
+          </section>
+
+          <section>
+          <h1><a href="https://github.com/alchemycs/spheron">spheron</a></h1>
+          <h3>The good</h3>
+          <ul>
+            <li>More recently updated</li>
+            <li>compiled on v0.10.x</li>
+            <li>Included an awesome video combining spheron and a Leap Motion! )no example code ;(</li>
+          </ul>
+          </section>
+
+          <section>
+          <h1>sphero</h1>
+          <h3>The bad</h3>
+          <ul>
+            <li>Poor examples</li>
+            <li>Not the best interface, sort of an odd psuedo-pubsub and code style feels 'cramped'</li>
+          </ul>
+          </section>
+
+          <section>
+          <h1><a href="http://cylonjs.com/documentation/platforms/sphero/">cylonjs-sphero</a></h1>
+          <h3>The good</h3>
+          <ul>
+            <li>written in coffee-script?</li>
+            <li>Appears to have Arduino like execution loop</li>
+          </ul>
+          </section>
+
+          <section>
+          <h1>cylonjs-sphero</h1>
+          <h3>The bad</h3>
+          <ul>
+            <li>written in coffee-script</li>
+          </ul>
+          </section>
+        </section>
+
+        <section>
+          <section>
+          <h1><a href="https://github.com/morganrallen/voxel-sphero">voxel-sphero</a></h1>
+          <img src="/img/hello_voxel-sphero.png" />
+          </section>
+
+          <section>
+          <h1>voxel-sphero</h1>
+          <div>done</div>
+          <div>
+            <ul>
+              <li>basic implementation of voxel entity</li>
+              <li>externally controlled movement</li>
+              <li>Can control real sphero</li>
+            </ul>
+          </div>
+
+          <br/>
+
+          <div>not done</div>
+          <div>
+            <ul>
+              <li>no real API yet</li>
+              <li>rotational velocity questionable</li>
+            </ul>
+          </div>
+          </section>
+        </section>
+
+        <section>
+        <h1><a href="https://github.com/morganrallen/simple-sphero">simple-sphero</a></h1>
+        <ul>
+          <li>Aims to be a dead simple API</li>
+          <li>left/right/forward commands to control your Sphero</li>
+          <li>Automagical handling of async operations through chained API</li>
+          <li>Can change LED color and toggle backlight</li>
+          <li>Keeps track of battery status</li>
+        </ul>
+        </section>
+
+        <section>
+        <h1>Goal, Project, The Future</h1>
+        <ul>
+          <li>S.L.A.M.</li>
+          <li>Maze Solver</li>
+          <li>Bot guide/visual assistant</li>
+        </ul>
+        </section>
+
+        <section>
+        <section>
+        <h1>Morgan 'ARR!' Allen</h1>
+        <h3>morganrallen@gmail.com</h3>
+        <h3><a href="http://ithoughtyouweretherobot.com">http://ithoughtyouweretherobot.com</a></h3>
+        <h3><a href="//twitter.com/captain_morgan">@captain_morgan</a></h3>
+        <br />
+        <h3 style="color:red;">!HIRE ME!</h3>
+        </section>
+        </section>
+			</div>
+		</div>
+
+		<script src="/lib/js/head.min.js"></script>
+		<script src="/js/reveal.js"></script>
+    <script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+  controls: true,
+  progress: true,
+  history: true,
+  center: true,
+
+  theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+  transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+  // Optional libraries used to extend on reveal.js
+  dependencies: [
+    { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+    { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+    { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+    { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+    { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+    { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+  ]
+});
+
+    </script>
+	</body>
+</html>
